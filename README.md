@@ -1,5 +1,5 @@
 # Basic Example of Spring Junit Testing
-Note - this is basic Spring - not Spring Boot
+Note - this is basic Spring - not Spring Boot - sourced from https://mkyong.com/unittest/junit-spring-integration-example/
 
 # What the App Does
 
