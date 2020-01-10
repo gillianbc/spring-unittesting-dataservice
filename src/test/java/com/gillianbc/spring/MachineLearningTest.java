@@ -20,17 +20,17 @@ public class MachineLearningTest {
 
 	//DI
     @Autowired
-    @Qualifier("ml")
-    DataModelService ml;
+    @Qualifier("mach")
+    DataModelService dms;
 
     @Test
     public void test_ml_always_return_true() {
 
         //assert correct type/impl
-        assertThat(ml, instanceOf(MachineLearningService.class));
+        assertThat(dms, instanceOf(MachineLearningService.class));
 
         //assert true
-        assertThat(ml.isValid(""), is(true));
+        assertThat(dms.isValid(""), is(true));
 
     }
 }
