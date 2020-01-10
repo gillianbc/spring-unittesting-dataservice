@@ -3,7 +3,9 @@ Note - this is basic Spring - not Spring Boot - sourced from https://mkyong.com/
 
 # Branches
 This is the master branch.  Have a look at the other branches for more variations:
-e.g. two-services has two classes that implement DataModelService.
+* master - 1 impl service of DataModelService, field autowiring
+* two-services - 2 classes that implement DataModelService, field autowiring
+* beanmaker - 1 impl service of DataModelService, field autowiring, @Bean
 
 # What the App Does
 
