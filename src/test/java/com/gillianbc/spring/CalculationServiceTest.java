@@ -16,18 +16,18 @@ import static org.hamcrest.Matchers.is;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {AppConfig.class})
-public class MachineLearningTest {
+public class CalculationServiceTest {
 
 	//DI
     @Autowired
-    @Qualifier("mach")
+    @Qualifier("calc")
     DataModelService dms;
 
     @Test
     public void test_ml_always_return_true() {
 
         //assert correct type/impl
-        assertThat(dms, instanceOf(MachineLearningService.class));
+        assertThat(dms, instanceOf(CalculationService.class));
 
         //assert true
         assertThat(dms.isValid(""), is(true));

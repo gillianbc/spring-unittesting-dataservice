@@ -11,9 +11,11 @@ All we have is:
 
 * DataModelService.java - interface with an isValid() method
 
-* MachineLearningService - impl class of the DataModelService.  Annotated with @Service and named "m1" so Spring will manage it in the application context and call it "m1"
+* MachineLearningService - impl class of the DataModelService.  Annotated with @Service and named "mach" so Spring will manage it in the application context and call it "mach"
 
-# What the test class does
+* CalculateService - impl class of the DataModelService.  Annotated with @Service and named "calc" so Spring will manage it in the application context and call it "calc"
+
+# What the test classes do
 
 * @RunWith(SpringJUnit4ClassRunner.class) -  Indicates that the class should use Spring's JUnit facilities.
 
@@ -21,7 +23,16 @@ All we have is:
 
 The above annotations means the spring context is loaded for us.  To test the MachineLearningService, we need a spring managed instance of that class.  If we just initialised it, it wouldn't be a spring bean - spring has a MachineLearningService and we'd just be creating another instance of that class.  If it had any dependencies on spring properties or other beans, it wouldn't know about them.  So to test it we ask spring to assign it for us - by autowiring.
 
-@Autowired
-@Qualifier("ml")
+## MachineLearningServiceTest
 
-i.e. have a look in the application context and assign the MachineLearningService bean known as m1
+@Autowired
+@Qualifier("mach")
+
+i.e. have a look in the application context and find the bean called "mach" that implements the DataModelService
+
+## CalculateServiceTest
+
+@Autowired
+@Qualifier("calc")
+
+i.e. have a look in the application context and find the bean called "calc" that implements the DataModelService
