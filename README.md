@@ -1,6 +1,10 @@
 # Basic Example of Spring Junit Testing
 Note - this is basic Spring - not Spring Boot - sourced from https://mkyong.com/unittest/junit-spring-integration-example/
 
+# Branches
+This is the master branch.  Have a look at the other branches for more variations:
+e.g. two-services has two classes that implement DataModelService.
+
 # What the App Does
 
 Well, there isn't really an app - nothing to run as such.  
@@ -24,4 +28,4 @@ The above annotations means the spring context is loaded for us.  To test the Ma
 @Autowired
 @Qualifier("mach")
 
-i.e. have a look in the application context and the bean called "mach" that implements the DataModelService
+i.e. tells spring have a look in the application context and use the bean called "mach" that implements the DataModelService
