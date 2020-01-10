@@ -13,7 +13,7 @@ All we have is:
 
 * BeanMaker - @Configuration tells spring to look in this class for beans to manage.  @Bean on a method tells spring to run this method, put the returned object into the application context
 
-* MachineLearningService - impl class of the DataModelService.  Annotated with @Service and named "mach" so Spring will manage it in the application context and call it "mach".  Autowires a String with name "yellowfruit". i.e. asks Spring to look in the app context for a bean of type String with name "yellowfruit".
+* MachineLearningService - impl class of the DataModelService.  Annotated with @Service and named "mach" so Spring will manage it in the application context and call it "mach".  **Field Autowiring** - Autowires a String field with name "yellowfruit". i.e. asks Spring to look in the app context for a bean of type String with name "yellowfruit".
 There is a getFruit() method that returns this String.
 
 # What the test classes do
