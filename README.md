@@ -11,9 +11,10 @@ All we have is:
 
 * DataModelService.java - interface with an isValid() method
 
-* MachineLearningService - impl class of the DataModelService.  Annotated with @Service and named "mach" so Spring will manage it in the application context and call it "mach"
+* BeanMaker - @Configuration tells spring to look in this class for beans to manage.  @Bean on a method tells spring to run this method, put the returned object into the application context
 
-* CalculateService - impl class of the DataModelService.  Annotated with @Service and named "calc" so Spring will manage it in the application context and call it "calc"
+* MachineLearningService - impl class of the DataModelService.  Annotated with @Service and named "mach" so Spring will manage it in the application context and call it "mach".  Autowires a String with name "yellowfruit". i.e. asks Spring to look in the app context for a bean of type String with name "yellowfruit".
+There is a getFruit() method that returns this String.
 
 # What the test classes do
 
@@ -30,9 +31,4 @@ The above annotations means the spring context is loaded for us.  To test the Ma
 
 i.e. tells spring to have a look in the application context and use the bean called "mach" that implements the DataModelService
 
-## CalculateServiceTest
 
-@Autowired
-@Qualifier("calc")
-
-i.e. tells spring to have a look in the application context and use the bean called "calc" that implements the DataModelService

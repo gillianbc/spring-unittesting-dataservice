@@ -3,6 +3,9 @@ package com.gillianbc.spring;
 import com.gillianbc.spring.AppConfig;
 import com.gillianbc.spring.DataModelService;
 import com.gillianbc.spring.MachineLearningService;
+
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +25,8 @@ public class MachineLearningTest {
     @Autowired
     @Qualifier("mach")
     DataModelService dms;
+    
+    
 
     @Test
     public void test_ml_always_return_true() {
@@ -31,6 +36,11 @@ public class MachineLearningTest {
 
         //assert true
         assertThat(dms.isValid(""), is(true));
-
+        
+    }
+    
+    @Test
+    public void checkBanana() {
+    	assertEquals("banana",dms.getFruit());
     }
 }
