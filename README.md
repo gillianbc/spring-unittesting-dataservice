@@ -28,7 +28,7 @@ The above annotations means the spring context is loaded for us.  To test the Ma
 @Autowired
 @Qualifier("mach")
 
-i.e. have a look in the application context and find the bean called "mach" that implements the DataModelService
+i.e. tells spring to have a look in the application context and use the bean called "mach" that implements the DataModelService
 
 ## CalculateServiceTest
 
